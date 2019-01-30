@@ -1,3 +1,5 @@
+import os, os.path
+
 class FileCounter:
-    def count_file(self, dir):
-        return 0
+    def count_file(self, directory):
+        return sum([len(files) for r, d, files in os.walk(directory)])
